@@ -98,9 +98,15 @@ export default function Contact() {
                     transition={{ duration: 0.6, delay: 0.6 }}
                     className="mt-24 pt-12 border-t border-white/10"
                 >
-                    <p className="text-sm text-white/30">
-                        © 2026 Arfat Shaikh. Crafted with Next.js, Framer Motion & AI.
-                    </p>
+                    <div className="flex flex-col items-center gap-4">
+                        <div className="px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-xs text-purple-300 flex items-center gap-2">
+                            <div className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+                            System evolving • Architecture V1.0
+                        </div>
+                        <p className="text-sm text-white/30">
+                            © 2026 Arfat Shaikh. Crafted with Next.js, Framer Motion & AI.
+                        </p>
+                    </div>
                 </motion.div>
             </div>
         </section>
