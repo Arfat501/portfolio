@@ -6,21 +6,24 @@ export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-[#000000]">
             {/* Simplified animated gradient background - only 2 blobs */}
+            {/* Simplified animated gradient background - Optimized for performance */}
             <div className="absolute inset-0 opacity-30">
                 <motion.div
                     animate={{
                         scale: [1, 1.1, 1],
+                        opacity: [0.5, 0.8, 0.5]
                     }}
                     transition={{
                         duration: 10,
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
-                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[120px]"
+                    className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[80px] will-change-transform"
                 />
                 <motion.div
                     animate={{
                         scale: [1, 1.15, 1],
+                        opacity: [0.5, 0.8, 0.5]
                     }}
                     transition={{
                         duration: 12,
@@ -28,7 +31,7 @@ export default function Hero() {
                         ease: "easeInOut",
                         delay: 1
                     }}
-                    className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-[120px]"
+                    className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-[80px] will-change-transform"
                 />
             </div>
 
