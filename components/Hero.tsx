@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 export default function Hero() {
     return (
         <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden bg-[#000000]">
-            {/* Simplified animated gradient background - only 2 blobs */}
             {/* Simplified animated gradient background - Optimized for performance */}
             <div className="absolute inset-0 opacity-30">
                 <motion.div
@@ -14,7 +13,7 @@ export default function Hero() {
                         opacity: [0.5, 0.8, 0.5]
                     }}
                     transition={{
-                        duration: 10,
+                        duration: 20, // Slowed down to 20s for smoother performance
                         repeat: Infinity,
                         ease: "easeInOut"
                     }}
@@ -26,7 +25,7 @@ export default function Hero() {
                         opacity: [0.5, 0.8, 0.5]
                     }}
                     transition={{
-                        duration: 12,
+                        duration: 25, // Slowed down to 25s
                         repeat: Infinity,
                         ease: "easeInOut",
                         delay: 1
@@ -35,23 +34,18 @@ export default function Hero() {
                 />
             </div>
 
-            <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, ease: 'easeOut' }}
-                className="relative z-10 max-w-5xl mx-auto text-center"
-            >
-                {/* Small label - removed excessive animations */}
+            <div className="relative z-10 max-w-5xl mx-auto text-center">
+                {/* Small label */}
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: 0.3, duration: 0.8 }}
                     className="inline-block mb-6 px-4 py-2 border border-purple-500/30 rounded-full text-sm text-purple-400 bg-purple-500/5 backdrop-blur-sm"
                 >
                     ✨ AI Automation Specialist
                 </motion.div>
 
-                {/* Name - removed floating animation to prevent lag */}
+                {/* Name */}
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold mb-6 tracking-tight">
                     <span className="bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
                         Arfat Shaikh
@@ -68,7 +62,7 @@ export default function Hero() {
                     AI Automation Engineer & Agent Builder
                 </motion.h2>
 
-                {/* Description - simplified hover effects */}
+                {/* Description */}
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
@@ -82,10 +76,10 @@ export default function Hero() {
                     <span className="text-pink-400 font-medium">CRMs</span>.
                 </motion.p>
 
-                {/* Stats row - removed individual floating animations */}
+                {/* Stats row */}
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                     transition={{ delay: 0.9, duration: 0.8 }}
                     className="flex flex-wrap justify-center gap-8 md:gap-12"
                 >
@@ -96,8 +90,8 @@ export default function Hero() {
                     ].map((stat, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
                             transition={{ delay: 1 + (index * 0.1), duration: 0.6 }}
                             whileHover={{ y: -5 }}
                             className="text-center group cursor-default"
@@ -134,7 +128,7 @@ export default function Hero() {
                         </div>
                     </motion.div>
                 </motion.div>
-            </motion.div>
+            </div>
         </section>
     );
 }
